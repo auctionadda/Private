@@ -12,10 +12,6 @@ def home():
 def scrape_for_prefix():
     # Get the prefix from the query parameters
     prefix = request.args.get('prefix')
-    url = request.args.get('url')
-    
-    if not prefix or not url:
-        return jsonify({"error": "Both 'url' and 'prefix' are required"}), 400
 
     try:
         # Send a GET request to fetch the raw HTML content from the provided URL
