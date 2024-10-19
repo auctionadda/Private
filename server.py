@@ -36,7 +36,7 @@ def scrape_for_prefix():
             else:
                 return jsonify({"error": "Couldn't find the sibling <span> tag."}), 404
         else:
-            return jsonify({"error": f"Couldn't find the <h4> tag with the prefix '{prefix}'."}), 404
+            return jsonify({"error": f"Couldn't find the <h4> tagg with the prefix '{prefix}'."}), 404
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
